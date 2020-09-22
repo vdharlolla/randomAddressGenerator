@@ -9,10 +9,10 @@
 		<version>2.3.4.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.random.addressgenerator</groupId>
-	<artifactId>com.random.addressgenerator</artifactId>
+	<groupId>randomeAddressGenerator</groupId>
+	<artifactId>com.randomeAddressGenerator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>com.random.addressgenerator</name>
+	<name>randomeAddressGenerator</name>
 	<description>Application to generate Random Addresses</description>
 
 	<properties>
@@ -32,7 +32,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<!-- https://mvnrepository.com/artifact/io.rest-assured/rest-assured -->
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.3.0</version>
+			<scope>test</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
