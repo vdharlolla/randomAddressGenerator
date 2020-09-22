@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>randomeAddressGenerator</groupId>
-	<artifactId>com.randomeAddressGenerator</artifactId>
+	<artifactId>randomeAddressGenerator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>randomeAddressGenerator</name>
 	<description>Application to generate Random Addresses</description>
@@ -19,7 +19,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<springfox-swagger.version>2.9.2</springfox-swagger.version>
 	</properties>
 
 	<dependencies>
@@ -44,19 +43,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.9.2</version>
-			<scope>compile</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
-			<version>${springfox-swagger.version}</version>
-			<scope>compile</scope>
+			<version>2.9.2</version>
 		</dependency>
 
 		<dependency>

@@ -9,6 +9,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.random.addressgenerator.exception.RandomAddressGeneratorException;
 import com.random.addressgenerator.model.Address;
 import com.random.addressgenerator.service.RandomAddressGeneratorService;
 
@@ -34,13 +35,12 @@ public class RandomAddressGeneratorController {
 				+ "Mexico\n" + "Netherlands  ";
 	}
 
-	@ApiOperation(value = "Generate Address", notes = "Generates Random Address ", response = String.class)
+	@ApiOperation(value = "Generate Address", notes = "Generates Random Address ", response = Address.class)
 	@ApiResponses({
-			@ApiResponse(code = 400, message = " Please cheeck your input Origin/Destination city does not exist or invalid", response = NullPointerException.class),
-			@ApiResponse(code = 500, message = "Generic error", response = Exception.class) })
+			@ApiResponse(code = 400, message = " Error while generating address", response = RandomAddressGeneratorException.class),
+			@ApiResponse(code = 500, message = "Internal Server Error", response = Exception.class) })
 	@GetMapping(value = "/randomizer/address", produces = MediaType.APPLICATION_JSON_VALUE)
 	public Address generateAddress() {
-
 		return addressGeneratorService.generateAddress();
 	}
 }
